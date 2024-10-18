@@ -20,7 +20,7 @@ class Book {
 let greatGatsby = new Book("The Great Gatsby", "F. Scott Fitzgerald", "12071994");
 console.log(greatGatsby.getDetails());             
 console.log(greatGatsby.isAvailable);               
-book1.isAvailable = false;                    
+greatGatsby.isAvailable = false;                    
 console.log(greatGatsby.isAvailable);
 
 
