@@ -15,7 +15,6 @@ class Book {
     }
     set isAvailable(status) {
         this._isAvailable = status; // availability setter
-    }
 }
 let greatGatsby = new Book("The Great Gatsby", "F. Scott Fitzgerald", "12071994");
 console.log(greatGatsby.getDetails());             
@@ -38,7 +37,6 @@ class Section {
         this.books.forEach(book => {
             console.log(`${book.title} - ${book.isAvailable ? "Available" : "Not Available"}`); // list all books in the genre section
         });
-    }
 }
 let romanceSection = new Section("Romance"); // "The Great Gatsby" book
 romanceSection.addBook(greatGatsby); 
@@ -60,8 +58,6 @@ class TotalBooks {
             return this.sections.reduce((total, section) => total + section.getAvailableBooks(), 0);
         }
     }
-    }
-}
 let totalBooks = new TotalBooks();
 totalBooks.addSection(romanceSection);
 
