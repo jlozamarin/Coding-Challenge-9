@@ -47,7 +47,9 @@ let pridePrejudice = new Book("Pride and Prejudice", "Jane Austen", "10161967");
 romanceSection.addBook(pridePrejudice);
 
 romanceSection.listBooks(); // lists books in romance genre section
-console.log(`Total available books in Romance: ${romanceSection.getAvailableBooks()}`); // shows the total available books in the romance genre section
+
+// Task 5: Handle books borrowing and returning
+console.log(`Total available books in Romance: ${romanceSection.calculateTotalBooksAvailable()}`); // shows the total available books in the romance genre section
 
 // Task 3: Create a patron class
 class Patron {
