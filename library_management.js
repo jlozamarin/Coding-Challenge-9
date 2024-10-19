@@ -56,8 +56,10 @@ class TotalBooks {
     addSection(section) {
         this.sections.push(section);
     }
-    calculateTotalBooksAvailable() {
-        return this.sections.reduce((total, section) => total + section.getAvailableBooks(), 0);
+        calculateTotalBooksAvailable() {
+            return this.sections.reduce((total, section) => total + section.getAvailableBooks(), 0);
+        }
+    }
     }
 }
 let totalBooks = new TotalBooks();
@@ -182,4 +184,5 @@ fantasySection.listBooks();
 console.log(`Total available books in Science Fiction: ${sciFiSection.calculateTotalBooksAvailable()}`);
 console.log(`Total available books in Horror: ${horrorSection.calculateTotalBooksAvailable()}`);
 console.log(`Total available books in Fantasy: ${fantasySection.calculateTotalBooksAvailable()}`);
-console.log(`Total available books in Library: ${Newlibrary.calculateTotalBooksAvailable()}`);
+console.log(`Total available books in Library: ${Newlibrary.calculateTotalBooksAvailable()}`); 
+
