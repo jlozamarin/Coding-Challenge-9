@@ -131,6 +131,7 @@ class Library {
     }
     calculateTotalBooksAvailable() {
         return this.sections.reduce((total, section) => total + section.getAvailableBooks(), 0);
+    }
 
 // Add more sections,patrons, and books
 
