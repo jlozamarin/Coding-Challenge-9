@@ -38,6 +38,7 @@ class Section {
         this.books.forEach(book => {
             console.log(`${book.title} - ${book.isAvailable ? "Available" : "Not Available"}`); // list all books in the genre section
         });
+    }
 }
 let romanceSection = new Section("Romance"); // "The Great Gatsby" book
 romanceSection.addBook(greatGatsby); 
