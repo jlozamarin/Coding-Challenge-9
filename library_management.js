@@ -49,6 +49,9 @@ romanceSection.addBook(pridePrejudice);
 romanceSection.listBooks(); // lists books in romance genre section
 
 // Task 5: Handle books borrowing and returning
+calculateTotalBooksAvailable() {
+    return this.books.filter(book => book.isAvailable).length;
+}
 console.log(`Total available books in Romance: ${romanceSection.calculateTotalBooksAvailable()}`); // shows the total available books in the romance genre section
 
 // Task 3: Create a patron class
