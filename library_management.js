@@ -55,10 +55,11 @@ class TotalBooks {
     }
     addSection(section) {
         this.sections.push(section);
+            }
         }
-        calculateTotalBooksAvailable() {
-            return this.sections.reduce((total, section) => total + section.getAvailableBooks(), 0);
-        }
+            calculateTotalBooksAvailable() {
+                return this.sections.reduce((total, section) => total + section.getAvailableBooks(), 0);
+            }
     }
 let totalBooks = new TotalBooks();
 totalBooks.addSection(romanceSection);
@@ -132,7 +133,7 @@ class Library {
     calculateTotalBooksAvailable() {
         return this.sections.reduce((total, section) => total + section.getAvailableBooks(), 0);
     }
-
+}
 // Add more sections,patrons, and books
 
 let sciFiSection = new Section("Science Fiction");
