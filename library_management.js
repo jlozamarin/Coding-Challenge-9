@@ -84,3 +84,21 @@ briDeaubler.returnBook(pridePrejudice);  // Brianna returns "Pride and Prejudice
 jesChatman.borrowBook(greatGatsby);  // Jesenia has "The Great Gatsby"
 jesChatman.returnBook(greatGatsby);  // Jesenia returns "The Great Gatsby"
 
+//Task 4: Create a vippatron class that inherits from patron
+class VIPPatron extends Patron {
+    constructor(name, priority = true) {
+        super(name); 
+        this.priority = priority;
+    }
+    borrowBook(book) {
+        if (book.isAvailable) {
+            this.borrowedBooks.push(book);
+            book.isAvailable = false; 
+            console.log(`VIP ${this.name} has"${book.title}".`);
+        } else {
+            console.log(`VIP ${this.name} does not have "${book.title}".`);
+        }
+    }
+}
+let isaMoore = new VIPPatron("Isabella Moore"); // VIP patron named Isabella Moore
+isaMoore.borrowBook(greatGatsby);  // Isabella (VIP Patron) has "The Great Gatsby"
