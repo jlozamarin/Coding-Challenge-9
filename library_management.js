@@ -94,7 +94,7 @@ class VIPPatron extends Patron {
         if (book.isAvailable) {
             this.borrowedBooks.push(book);
             book.isAvailable = false; 
-            console.log(`VIP ${this.name} has"${book.title}".`);
+            console.log(`VIP ${this.name} has "${book.title}".`);
         } else {
             console.log(`VIP ${this.name} does not have "${book.title}".`);
         }
