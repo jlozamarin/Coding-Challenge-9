@@ -121,6 +121,17 @@ let isaMoore = new VIPPatron("Isabella Moore"); // VIP patron named Isabella Moo
 isaMoore.borrowBook(greatGatsby);  // Isabella (VIP Patron) has "The Great Gatsby"
 
 // Task 6: Create and manage sections and patrons
+
+class Library {
+    constructor() {
+        this.sections = [];
+    }
+    addSection(section) {
+        this.sections.push(section);
+    }
+    calculateTotalBooksAvailable() {
+        return this.sections.reduce((total, section) => total + section.getAvailableBooks(), 0);
+
 // Add more sections,patrons, and books
 
 let sciFiSection = new Section("Science Fiction");
