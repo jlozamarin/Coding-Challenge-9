@@ -147,7 +147,7 @@ horrorSection.addBook(theShining); horrorSection.addBook(dracula); horrorSection
 fantasySection.addBook(harryPotter);fantasySection.addBook(theHobbit); fantasySection.addBook(theLion);
 
 let Newlibrary = new Library();
-Newlibrarylibrary.addSection(sciFiSection); Newlibrary.addSection(horrorSection); Newlibrary.addSection(fantasySection);
+Newlibrary.addSection(sciFiSection); Newlibrary.addSection(horrorSection); Newlibrary.addSection(fantasySection);
 
 // New patrons
 let tevBaker = new Patron("Tevionne Baker");
