@@ -48,25 +48,23 @@ romanceSection.addBook(pridePrejudice);
 
 romanceSection.listBooks(); // lists books in romance genre section
 
-// Task 5: Handle books borrowing and returning
-class Library {
+// Task 5: (Added to Task 2) Handle books borrowing and returning
+class TotalBooks {
     constructor() {
         this.sections = [];
     }
-
     addSection(section) {
         this.sections.push(section);
     }
-
     calculateTotalBooksAvailable() {
         return this.sections.reduce((total, section) => total + section.getAvailableBooks(), 0);
     }
 }
-let library = new Library();
-library.addSection(romanceSection);
+let totalBooks = new TotalBooks();
+totalBooks.addSection(romanceSection);
 
 console.log(`Total available books in Romance: ${romanceSection.getAvailableBooks()}`); // shows the total available books in the romance genre section
-console.log(`Total available books in Library: ${library.calculateTotalBooksAvailable()}`); // shows the total available books in the library
+console.log(`Total available books in Library: ${totalBooks.calculateTotalBooksAvailable()}`); // shows the total available books in the library
 
 // Task 3: Create a patron class
 class Patron {
@@ -121,3 +119,5 @@ class VIPPatron extends Patron {
 }
 let isaMoore = new VIPPatron("Isabella Moore"); // VIP patron named Isabella Moore
 isaMoore.borrowBook(greatGatsby);  // Isabella (VIP Patron) has "The Great Gatsby"
+
+// Task 6: 
