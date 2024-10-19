@@ -15,6 +15,7 @@ class Book {
     }
     set isAvailable(status) {
         this._isAvailable = status; // availability setter
+    }
 }
 let greatGatsby = new Book("The Great Gatsby", "F. Scott Fitzgerald", "12071994");
 console.log(greatGatsby.getDetails());             
