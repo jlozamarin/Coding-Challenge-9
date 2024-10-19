@@ -46,6 +46,6 @@ romanceSection.addBook(greatGatsby);
 let pridePrejudice = new Book("Pride and Prejudice", "Jane Austen", "10161967"); // add "Pride and Prejudice" book
 romanceSection.addBook(pridePrejudice);
 
-fictionSection.listBooks(); // lists books in romance genre section
+romanceSectionSection.listBooks(); // lists books in romance genre section
 console.log(`Total available books in Romance: ${romanceSection.getAvailableBooks()}`); // shows the total available books in the romance genre section
 
