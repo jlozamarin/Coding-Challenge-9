@@ -101,7 +101,7 @@ briDeaubler.returnBook(pridePrejudice);  // Brianna returns "Pride and Prejudice
 jesChatman.borrowBook(greatGatsby);  // Jesenia has "The Great Gatsby"
 jesChatman.returnBook(greatGatsby);  // Jesenia returns "The Great Gatsby"
 
-//Task 4: Create a vippatron class that inherits from patron
+//Task 4: Create a vip patron class that inherits from patron
 class VIPPatron extends Patron {
     constructor(name, priority = true) {
         super(name); 
@@ -180,7 +180,7 @@ console.log("Fantasy Genre Section:");
 fantasySection.listBooks();
 
 // Calculate the total books available for each section and the new library
-console.log(`Total available books in Science Fiction: ${sciFiSection.calculateTotalBooksAvailable()}`);
-console.log(`Total available books in Horror: ${horrorSection.calculateTotalBooksAvailable()}`);
-console.log(`Total available books in Fantasy: ${fantasySection.calculateTotalBooksAvailable()}`);
+console.log(`Total available books in Science Fiction: ${sciFiSection.getAvailableBooks()}`);
+console.log(`Total available books in Horror: ${horrorSection.getAvailableBooks()}`);
+console.log(`Total available books in Fantasy: ${fantasySection.getAvailableBooks()}`);
 console.log(`Total available books in Library: ${Newlibrary.calculateTotalBooksAvailable()}`);
