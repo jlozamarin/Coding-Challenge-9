@@ -120,4 +120,55 @@ class VIPPatron extends Patron {
 let isaMoore = new VIPPatron("Isabella Moore"); // VIP patron named Isabella Moore
 isaMoore.borrowBook(greatGatsby);  // Isabella (VIP Patron) has "The Great Gatsby"
 
-// Task 6: 
+// Task 6: Create and manage sections and patrons
+// Add more sections,patrons, and books
+
+let sciFiSection = new Section("Science Fiction");
+let horrorSection = new Section("Horror");
+let fantasySection = new Section("Fantasy");
+
+// Books for Science Fiction section
+let dune = new Book("Dune", "Frank Herbert", "09282005");
+let endersGame = new Book("Ender's Game", "Orson Scott Card", "11021956");
+let theMartian = new Book("The Martian", "Andy Weir", "02022014");
+
+// Books for Horror section
+let theShining = new Book("The Shining", "Stephen King", "08112000");
+let dracula = new Book("Dracula", "Bram Stoker", "86411095");
+let frankinstein = new Book("Frankenstein", "Mary Shelley", "01181818");
+
+// Books for Fantasy section
+let harryPotter = new Book("Harry Potter and the Sorcerer's Stone", "J.K. Rowling", "06261997");
+let theHobbit = new Book("The Hobbit", "J.R.R. Tolkien", "09161937");
+let theLion = new Book("The Lion, the Witch and the Wardrobe", "C.S. Lewis", "10151950");
+
+sciFiSection.addBook(dune); sciFiSection.addBook(endersGame); sciFiSection.addBook(theMartian);
+horrorSection.addBook(theShining); horrorSection.addBook(dracula); horrorSection.addBook(frankinstein);
+fantasySection.addBook(harryPotter);fantasySection.addBook(theHobbit); fantasySection.addBook(theLion);
+
+let Newlibrary = new Library();
+Newlibrarylibrary.addSection(sciFiSection); Newlibrary.addSection(horrorSection); Newlibrary.addSection(fantasySection);
+
+// New patrons
+let tevBaker = new Patron("Tevionne Baker");
+let juanCarlos = new VIPPatron("Juan Carlos");
+let chrisBrown = new Patron("Chris Brown");
+
+tevBaker.borrowBook(dune);  // Tev borrows "Dune"
+juanCarlos.borrowBook(dracula);  // VIP Jane borrows "Dracula"
+chrisBrown.borrowBook(theHobbit);  // Chris borrows "The Hobbit"
+tevBaker.returnBook(dune);  // Tev returns "Dune"
+
+// List total books in each genre section
+console.log("Science Fiction Genre Section:");
+sciFiSection.listBooks();
+console.log("Horror Genre Section:");
+horrorSection.listBooks();
+console.log("Fantasy Genre Section:");
+fantasySection.listBooks();
+
+// Calculate the total books available for each section and the new library
+console.log(`Total available books in Science Fiction: ${sciFiSection.calculateTotalBooksAvailable()}`);
+console.log(`Total available books in Horror: ${horrorSection.calculateTotalBooksAvailable()}`);
+console.log(`Total available books in Fantasy: ${fantasySection.calculateTotalBooksAvailable()}`);
+console.log(`Total available books in Library: ${Newlibrary.calculateTotalBooksAvailable()}`);
