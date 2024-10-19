@@ -146,7 +146,7 @@ sciFiSection.addBook(dune); sciFiSection.addBook(endersGame); sciFiSection.addBo
 horrorSection.addBook(theShining); horrorSection.addBook(dracula); horrorSection.addBook(frankinstein);
 fantasySection.addBook(harryPotter);fantasySection.addBook(theHobbit); fantasySection.addBook(theLion);
 
-let Newlibrary = new Library();
+let Newlibrary = new Newlibrary();
 Newlibrary.addSection(sciFiSection); Newlibrary.addSection(horrorSection); Newlibrary.addSection(fantasySection);
 
 // New patrons
