@@ -49,3 +49,38 @@ romanceSection.addBook(pridePrejudice);
 romanceSection.listBooks(); // lists books in romance genre section
 console.log(`Total available books in Romance: ${romanceSection.getAvailableBooks()}`); // shows the total available books in the romance genre section
 
+// Task 3: Create a patron class
+class Patron {
+    constructor(name) {
+        this.name = name; 
+        this.borrowedBooks = []; 
+    }
+    borrowBook(book) { //allows patron to borrow a book
+        if (book.isAvailable) {
+            this.borrowedBooks.push(book);
+            book.isAvailable = true;    
+            console.log(`${this.name} has "${book.title}".`);
+        } else {
+            console.log(`"${book.title}" is not available.`);
+        }
+    }
+    returnBook(book) { //allows patron to return a book
+        let bookIndex = this.borrowedBooks.indexOf(book);
+        if (bookIndex !== -1) {
+            this.borrowedBooks.splice(bookIndex, 1);  
+            book.isAvailable = true;                 
+            console.log(`${this.name} returned "${book.title}".`);
+        } else {
+            console.log(`${this.name} does not have "${book.title}".`);
+        }
+    }
+}
+let briDeaubler = new Patron("Brianna Deaubler"); // patron named Brianna Deaubler
+let jesChatman = new Patron("Jesenia Chatman"); // patron named Jesenia Chatman
+
+briDeaubler.borrowBook(pridePrejudice);  // Brianna has "Pride and Prejudice"
+briDeaubler.returnBook(pridePrejudice);  // Brianna returns "Pride and Prejudice"
+
+jesChatman.borrowBook(greatGatsby);  // Jesenia has "The Great Gatsby"
+jesChatman.returnBook(greatGatsby);  // Jesenia returns "The Great Gatsby"
+
